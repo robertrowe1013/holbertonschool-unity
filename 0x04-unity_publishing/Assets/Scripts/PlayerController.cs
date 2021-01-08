@@ -15,19 +15,39 @@ public class PlayerController : MonoBehaviour
     public Text healthText;
     public Text winLoseText;
     public GameObject winLoseBG;
+    public Joystick joystick;
+    public GameObject onscreenJoystick;
 
     // Start is called before the first frame update
     void Start()
     {
         playerBody = GetComponent<Rigidbody>();
+        if(Application.platform == RuntimePlatform.Android)
+        {
+            onscreenJoystick.SetActive(true);
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        inputVector = new Vector3(Input.GetAxisRaw("Horizontal") * speed, 0, Input.GetAxisRaw("Vertical") * speed);
-        playerBody.velocity = inputVector;
-        transform.Translate(Input.acceleration.x * speed * Time.deltaTime, 0, Input.acceleration.y * speed * Time.deltaTime);
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (joystick.Horizontal != 0 && joystick.Vertical != 0)
+            {
+                inputVector = new Vector3(joystick.Horizontal * speed, 0, joystick.Vertical * speed);
+                playerBody.velocity = inputVector;
+            }
+            else
+            {
+                transform.Translate(Input.acceleration.x * speed * Time.deltaTime, 0, Input.acceleration.y * speed * Time.deltaTime);
+            }
+        }
+        else
+        {
+                    inputVector = new Vector3(Input.GetAxisRaw("Horizontal") * speed, 0, Input.GetAxisRaw("Vertical") * speed);
+                    playerBody.velocity = inputVector;
+        }
     }
 
     // gameplay

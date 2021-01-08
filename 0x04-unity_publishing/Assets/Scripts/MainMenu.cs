@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     public Material trapMat;
     public Material goalMat;
     public Toggle colorblindMode;
-
+    
     public void PlayMaze()
     {
         if (colorblindMode.isOn)
