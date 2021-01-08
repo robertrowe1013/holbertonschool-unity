@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         inputVector = new Vector3(Input.GetAxisRaw("Horizontal") * speed, 0, Input.GetAxisRaw("Vertical") * speed);
         playerBody.velocity = inputVector;
+        transform.Translate(Input.acceleration.x * speed * Time.deltaTime, 0, Input.acceleration.y * speed * Time.deltaTime);
     }
 
     // gameplay
