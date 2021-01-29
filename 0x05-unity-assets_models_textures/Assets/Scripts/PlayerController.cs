@@ -6,22 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
     public float speed = 20f;
-    Vector3 velocity;
-    public float gravity = -9.81f;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     public Transform cam;
 
     void FixedUpdate()
     {
-        PlayerMovement();
-    }
-
-    void PlayerMovement()
-    {
         float hor = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
-        velocity.y += gravity * Time.deltaTime;
         Vector3 direction = new Vector3(hor, 0f, vert).normalized;
         if (direction.magnitude >= 0.1f)
         {
