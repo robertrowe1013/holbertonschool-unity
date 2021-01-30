@@ -4,61 +4,33 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float rotationSpeed = 1;
-    public Transform Target, Player;
-    float mouseX, mouseY;
-    public Transform Obstruction;
-    float zoomSpeed = 2f;
+    public Transform lookAt;
+    public Transform camTransform;
+    private Camera cam;
+
+    private float distance = 6.25f;
+    private float currentX = 0f;
+    private float currentY = 0f;
+    private float sensitivityX = 5f;
+    private float sensitivityY = 5f;
 
     void Start()
     {
-        Obstruction = Target;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        camTransform = transform;
+        cam = Camera.main;
     }
 
-    private void LateUpdate()
+    void Update()
     {
-        CamControl();
-        ViewObstructed();
+        currentX += Input.GetAxisRaw("Mouse X");
+        currentY -= Input.GetAxisRaw("Mouse Y");
     }
-    
 
-    void CamControl()
+    void LateUpdate()
     {
-        mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
-        mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
-        mouseY = Mathf.Clamp(mouseY, -90, 90);
-
-        transform.LookAt(Target);
-
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            Target.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        }
-    }
-    
-
-    void ViewObstructed()
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(transform.position, Target.position - transform.position, out hit, 4.5f))
-        {
-            if (hit.collider.gameObject.tag != "Player")
-            {
-                Obstruction = hit.transform;
-                Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
-                
-                if(Vector3.Distance(Obstruction.position, transform.position) >= 3f && Vector3.Distance(transform.position, Target.position) >= 1.5f)
-                    transform.Translate(Vector3.forward * zoomSpeed * Time.deltaTime);
-            }
-            else
-            {
-                Obstruction.gameObject.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-                if (Vector3.Distance(transform.position, Target.position) < 4.5f)
-                    transform.Translate(Vector3.back * zoomSpeed * Time.deltaTime);
-            }
-        }
+        Vector3 direction = new Vector3 (0, 0, -distance);
+        Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
+        camTransform.position = lookAt.position + rotation * direction;
+        camTransform.LookAt(lookAt.position);
     }
 }
