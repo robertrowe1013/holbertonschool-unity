@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
     bool isGrounded;
     public float jumpHeight = 3f;
+    bool doubleJump;
     // respawn
     public Transform spawnPoint;
     public GameObject thePlayer;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            doubleJump = true;
         }
         float hor = Input.GetAxisRaw("Horizontal");
         float vert = Input.GetAxisRaw("Vertical");
@@ -45,7 +47,11 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-
+        if (Input.GetButtonDown("Jump") && isGrounded == false && doubleJump == true)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            doubleJump = false;
+        }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
