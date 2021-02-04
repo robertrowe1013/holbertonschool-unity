@@ -55,9 +55,18 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if (groundCheck.position.y < -50)
+        if (groundCheck.position.y < -20)
         {
             thePlayer.transform.position = spawnPoint.transform.position;
+        }
+    }
+
+    void OnTriggerEnter(Collider item)
+    {
+        if (item.tag == "Coin")
+        {
+            GetComponent<Timer>().timerValue -= 5f;
+            item.gameObject.SetActive(false);
         }
     }
 }
