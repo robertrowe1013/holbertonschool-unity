@@ -7,11 +7,15 @@ public class TimerTrigger : MonoBehaviour
     public GameObject player;
     GameObject[] coins;
 
+    void Start()
+    {
+        coins = GameObject.FindGameObjectsWithTag("Coin");
+    }
+
     void OnTriggerExit()
     {
         player.GetComponent<Timer>().timerValue = 0f;
         player.GetComponent<Timer>().timerValueTrigger = true;
-        coins = GameObject.FindGameObjectsWithTag("Coin");
         foreach (GameObject coin in coins)
         {
             coin.SetActive(true);
