@@ -3,3 +3,4 @@
 0x01. Unity - Unity Concepts
 0x04. Unity - Publishing
 0x05. Unity - Assets: Models, Textures
+0x06. Unity - Assets: UI
