@@ -16,3 +16,6 @@
 13. What's left of the flag
 14. (Sea)horse race
 15. Under development 
+
+Skyboxes: Farland Skies - Cloudy Crown
+Models: Kenney's Nature Pack Extended
