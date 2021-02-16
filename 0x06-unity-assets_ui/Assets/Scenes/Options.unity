@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 561424431}
   - component: {fileID: 561424430}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SFXText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 1807183592}
   - component: {fileID: 1807183591}
   m_Layer: 5
-  m_Name: Label
+  m_Name: InvertYToggleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1788,7 +1788,7 @@ GameObject:
   - component: {fileID: 1839716490}
   - component: {fileID: 1839716489}
   m_Layer: 5
-  m_Name: Text
+  m_Name: BGMText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,7 +1865,7 @@ GameObject:
   - component: {fileID: 1847023082}
   - component: {fileID: 1847023083}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: InvertYToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
