@@ -5,6 +5,7 @@ using UnityEngine;
 public class TimerTrigger : MonoBehaviour
 {
     public GameObject player;
+    public GameObject timerCanvas;
     GameObject[] coins;
 
     void Start()
@@ -14,10 +15,9 @@ public class TimerTrigger : MonoBehaviour
 
     void OnTriggerExit()
     {
+        timerCanvas.SetActive(true);
         player.GetComponent<Timer>().timerValue = 0f;
         player.GetComponent<Timer>().timerValueTrigger = true;
-        player.GetComponent<Timer>().TimerText.color = Color.white;
-        player.GetComponent<Timer>().TimerText.fontSize = 48;
         foreach (GameObject coin in coins)
         {
             coin.SetActive(true);

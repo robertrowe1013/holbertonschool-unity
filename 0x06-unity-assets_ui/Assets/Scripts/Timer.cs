@@ -21,4 +21,9 @@ public class Timer : MonoBehaviour
             TimerText.text = string.Format("{0}:{1:00}.{2:00}", minutes, seconds, milliseconds);
         }
     }
+
+    public void Win()
+    {
+
+    }
 }

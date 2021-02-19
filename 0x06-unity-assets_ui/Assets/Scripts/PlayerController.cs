@@ -25,10 +25,11 @@ public class PlayerController : MonoBehaviour
     public GameObject thePlayer;
     // pause menu
     public PauseMenu pm;
+    public GameObject winCanvas; 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && winCanvas.activeSelf == false)
         {
             if (pm.gameIsPaused)
             {
