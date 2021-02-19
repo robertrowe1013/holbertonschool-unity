@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     public Transform lookAt;
     public Transform camTransform;
     private Camera cam;
-    public bool isInverted = true;
+    public bool isInverted;
 
     private float distance = 6.25f;
     private float currentX = 0f;
@@ -22,6 +22,15 @@ public class CameraController : MonoBehaviour
     
         camTransform = transform;
         cam = Camera.main;
+
+        if (PlayerPrefs.GetInt("Inverted") == 1)
+        {
+            isInverted = true;
+        }
+        else
+        {
+            isInverted = false;
+        }
     }
 
     void Update()
