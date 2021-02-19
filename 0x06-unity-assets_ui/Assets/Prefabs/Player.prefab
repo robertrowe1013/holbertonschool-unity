@@ -323,8 +323,6 @@ GameObject:
   - component: {fileID: 6036653769836371759}
   - component: {fileID: 6036653769836371744}
   - component: {fileID: 8255172558071226522}
-  - component: {fileID: 1543082455}
-  - component: {fileID: 6483695428137594908}
   - component: {fileID: 1543082454}
   - component: {fileID: 2391382107567263584}
   m_Layer: 0
@@ -431,36 +429,6 @@ MonoBehaviour:
   thePlayer: {fileID: 6036653769836371746}
   pm: {fileID: 0}
   winCanvas: {fileID: 0}
---- !u!114 &1543082455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6036653769836371746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64f7825a6dbd644dbc04959450ecce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerText: {fileID: 0}
-  timerValue: 0
-  timerValueTrigger: 0
---- !u!114 &6483695428137594908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6036653769836371746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a64f7825a6dbd644dbc04959450ecce3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimerText: {fileID: 0}
-  timerValue: 0
-  timerValueTrigger: 0
 --- !u!143 &1543082454
 CharacterController:
   m_ObjectHideFlags: 0
@@ -492,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 0}
+  EndText: {fileID: 0}
   timerValue: 0
   timerValueTrigger: 0
 --- !u!1 &6419627372852393971

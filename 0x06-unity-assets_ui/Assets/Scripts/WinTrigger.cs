@@ -14,6 +14,7 @@ public class WinTrigger : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0f;
         timer.timerValueTrigger = false;
+        timer.Win();
         timerCanvas.SetActive(false);
         winCanvas.SetActive(true);
     }

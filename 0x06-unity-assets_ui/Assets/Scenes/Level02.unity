@@ -1180,6 +1180,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 359500765}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &359500767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9162874693902215196, guid: be3b249a24114eb44b995da8601c389b,
+    type: 3}
+  m_PrefabInstance: {fileID: 359500765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &363489100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 9ecbf57df6fb0944293a3b91f91f3723,
@@ -1200,6 +1212,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9ecbf57df6fb0944293a3b91f91f3723, type: 3}
+--- !u!1 &399780005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5569130243718211875, guid: 61875c50077f35846921209f5e009258,
+    type: 3}
+  m_PrefabInstance: {fileID: 4589085626243165061}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &408789390
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,9 +2281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9b824efbdb7ea844b5472f932665fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winCanvas: {fileID: 0}
-  timerCanvas: {fileID: 0}
-  timer: {fileID: 0}
+  winCanvas: {fileID: 359500766}
+  timerCanvas: {fileID: 399780005}
+  timer: {fileID: 6036653770470264568}
 --- !u!1001 &1015578319
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2430,7 +2448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1543082453}
-  timerCanvas: {fileID: 0}
+  timerCanvas: {fileID: 399780005}
 --- !u!65 &1024148609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4041,6 +4059,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2391382107567263584, guid: cd8558117da39ec498bc8806a1edb084,
+        type: 3}
+      propertyPath: EndText
+      value: 
+      objectReference: {fileID: 359500767}
+    - target: {fileID: 2391382107567263584, guid: cd8558117da39ec498bc8806a1edb084,
+        type: 3}
+      propertyPath: TimerText
+      value: 
+      objectReference: {fileID: 238145143}
     - target: {fileID: 6036653769836371746, guid: cd8558117da39ec498bc8806a1edb084,
         type: 3}
       propertyPath: m_Name
@@ -4128,3 +4156,15 @@ PrefabInstance:
       objectReference: {fileID: 2005641615}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8558117da39ec498bc8806a1edb084, type: 3}
+--- !u!114 &6036653770470264568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2391382107567263584, guid: cd8558117da39ec498bc8806a1edb084,
+    type: 3}
+  m_PrefabInstance: {fileID: 6036653770470264567}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543082453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64f7825a6dbd644dbc04959450ecce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
