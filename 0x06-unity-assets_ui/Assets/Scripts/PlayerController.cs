@@ -23,9 +23,22 @@ public class PlayerController : MonoBehaviour
     // respawn
     public Transform spawnPoint;
     public GameObject thePlayer;
+    // pause menu
+    public PauseMenu pm;
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pm.gameIsPaused)
+            {
+                pm.Resume();
+            }
+            else
+            {
+                pm.Pause();
+            }
+        }
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (isGrounded && velocity.y < 0)
         {
