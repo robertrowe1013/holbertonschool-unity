@@ -16,6 +16,8 @@ public class TimerTrigger : MonoBehaviour
     {
         player.GetComponent<Timer>().timerValue = 0f;
         player.GetComponent<Timer>().timerValueTrigger = true;
+        player.GetComponent<Timer>().TimerText.color = Color.white;
+        player.GetComponent<Timer>().TimerText.fontSize = 48;
         foreach (GameObject coin in coins)
         {
             coin.SetActive(true);

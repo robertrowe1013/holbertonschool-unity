@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
     public void Options()
     {
         PlayerPrefs.SetString("lastLoadedScene", SceneManager.GetActiveScene().name);
-        string sceneName = PlayerPrefs.GetString("lastLoadedScene");
         SceneManager.LoadScene(4);
     }
 
