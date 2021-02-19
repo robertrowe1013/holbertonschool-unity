@@ -121,7 +121,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4928346484257504302}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 280635787}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4928346484540836717
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +145,7 @@ GameObject:
   - component: {fileID: 4928346484540836714}
   - component: {fileID: 4928346484540836715}
   - component: {fileID: 4928346484540836716}
+  - component: {fileID: 280635787}
   m_Layer: 5
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -226,6 +238,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &280635787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4928346484540836717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c31350da623bdf4fa88d60b01479d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameIsPaused: 0
 --- !u!1 &4928346484554965027
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +447,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4928346484933296038}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 280635787}
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4928346485082690087
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,7 +580,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4928346485082690084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 280635787}
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4928346485088259688
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +985,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4928346484540836713}
     m_Modifications:
+    - target: {fileID: 1013594975542879570, guid: 9bc681cd00d5a4043a528326607807e0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280635787}
     - target: {fileID: 1013594975542879571, guid: 9bc681cd00d5a4043a528326607807e0,
         type: 3}
       propertyPath: m_PreserveAspect

@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public Transform lookAt;
     public Transform camTransform;
     private Camera cam;
+    public bool isInverted = true;
 
     private float distance = 6.25f;
     private float currentX = 0f;
@@ -26,7 +27,14 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         currentX += Input.GetAxisRaw("Mouse X");
-        currentY -= Input.GetAxisRaw("Mouse Y");
+        if (isInverted)
+        {
+            currentY -= Input.GetAxisRaw("Mouse Y");
+        }
+        else
+        {
+            currentY += Input.GetAxisRaw("Mouse Y");
+        }
         currentY = Mathf.Clamp(currentY, -25f, 25f);
 
     }
