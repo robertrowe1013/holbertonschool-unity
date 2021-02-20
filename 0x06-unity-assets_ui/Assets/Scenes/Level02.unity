@@ -2058,6 +2058,8 @@ MonoBehaviour:
   lookAt: {fileID: 1543082457}
   camTransform: {fileID: 0}
   isInverted: 1
+  winCanvas: {fileID: 359500766}
+  pauseCanvas: {fileID: 1015578321}
 --- !u!4 &934459450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: e49bfd1a5116c0f4a90a8dfcdbba7e20,
@@ -2409,12 +2411,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1015578319}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1015578321}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c31350da623bdf4fa88d60b01479d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1015578321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4928346484540836717, guid: 0e163e781a48bd741b5a35c48b77214b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1015578319}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1024148607
 GameObject:
   m_ObjectHideFlags: 0

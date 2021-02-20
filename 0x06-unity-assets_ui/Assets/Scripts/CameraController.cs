@@ -8,6 +8,8 @@ public class CameraController : MonoBehaviour
     public Transform camTransform;
     private Camera cam;
     public bool isInverted;
+    public GameObject winCanvas;
+    public GameObject pauseCanvas;
 
     private float distance = 6.25f;
     private float currentX = 0f;
@@ -35,17 +37,19 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        currentX += Input.GetAxisRaw("Mouse X");
-        if (isInverted)
+        if (winCanvas.activeSelf == false && pauseCanvas.activeSelf == false)
         {
-            currentY -= Input.GetAxisRaw("Mouse Y");
+            currentX += Input.GetAxisRaw("Mouse X");
+            if (isInverted)
+            {
+                currentY -= Input.GetAxisRaw("Mouse Y");
+            }
+            else
+            {
+                currentY += Input.GetAxisRaw("Mouse Y");
+            }
+            currentY = Mathf.Clamp(currentY, -25f, 25f);
         }
-        else
-        {
-            currentY += Input.GetAxisRaw("Mouse Y");
-        }
-        currentY = Mathf.Clamp(currentY, -25f, 25f);
-
     }
 
     void LateUpdate()
