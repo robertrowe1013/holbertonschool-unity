@@ -141,6 +141,7 @@ MonoBehaviour:
   thePlayer: {fileID: 6036653769836371746}
   pm: {fileID: 0}
   winCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
 --- !u!143 &1543082454
 CharacterController:
   m_ObjectHideFlags: 0
@@ -242,6 +243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ty
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4aab45ba1c411764997101340c018e97,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b07d61be90066264a91618e609851b13, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aab45ba1c411764997101340c018e97, type: 3}
 --- !u!4 &6074293648288812730 stripped

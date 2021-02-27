@@ -25,7 +25,8 @@ public class PlayerController : MonoBehaviour
     public GameObject thePlayer;
     // pause menu
     public PauseMenu pm;
-    public GameObject winCanvas; 
+    public GameObject winCanvas;
+    public GameObject pauseCanvas;
 
     void Update()
     {
@@ -57,11 +58,11 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && pauseCanvas.activeSelf == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
-        if (Input.GetButtonDown("Jump") && isGrounded == false && doubleJump == true)
+        if (Input.GetButtonDown("Jump") && isGrounded == false && doubleJump == true && pauseCanvas.activeSelf == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             doubleJump = false;
