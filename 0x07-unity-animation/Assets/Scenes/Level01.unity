@@ -4179,6 +4179,11 @@ PrefabInstance:
       propertyPath: pauseCanvas
       value: 
       objectReference: {fileID: 4928346484818060008}
+    - target: {fileID: 8921993587564423068, guid: cd8558117da39ec498bc8806a1edb084,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 4aab45ba1c411764997101340c018e97, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd8558117da39ec498bc8806a1edb084, type: 3}
 --- !u!1001 &9162874694813223937
