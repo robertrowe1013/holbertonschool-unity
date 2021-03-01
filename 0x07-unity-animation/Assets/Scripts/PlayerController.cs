@@ -27,7 +27,16 @@ public class PlayerController : MonoBehaviour
     public PauseMenu pm;
     public GameObject winCanvas;
     public GameObject pauseCanvas;
+    // animation
+    public Animator anim;
 
+    void Start ()
+    {
+        foreach (Animator ani in GetComponentsInChildren<Animator>())
+        {
+            anim = ani;
+        }
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && winCanvas.activeSelf == false)
@@ -57,6 +66,11 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
         }
         if (Input.GetButtonDown("Jump") && isGrounded && pauseCanvas.activeSelf == false)
         {
