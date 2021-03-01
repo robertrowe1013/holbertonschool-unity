@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             doubleJump = false;
-            anim.SetTrigger("isJumping");
+            anim.SetTrigger("isDoubleJumping");
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
