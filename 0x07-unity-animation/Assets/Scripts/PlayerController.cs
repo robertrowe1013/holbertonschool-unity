@@ -86,7 +86,11 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        if (groundCheck.position.y < -20)
+        if (thePlayer.transform.position.y < -10)
+        {
+            anim.SetTrigger("isFalling");
+        }
+        if (thePlayer.transform.position.y < -20)
         {
             thePlayer.transform.position = spawnPoint.transform.position;
         }
