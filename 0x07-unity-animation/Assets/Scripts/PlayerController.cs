@@ -75,11 +75,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded && pauseCanvas.activeSelf == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            anim.SetTrigger("isJumping");
         }
         if (Input.GetButtonDown("Jump") && isGrounded == false && doubleJump == true && pauseCanvas.activeSelf == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             doubleJump = false;
+            anim.SetTrigger("isJumping");
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
