@@ -139,6 +139,7 @@ MonoBehaviour:
   jumpHeight: 3
   spawnPoint: {fileID: 0}
   thePlayer: {fileID: 6036653769836371746}
+  lockmove: 0
   pm: {fileID: 0}
   winCanvas: {fileID: 0}
   pauseCanvas: {fileID: 0}
