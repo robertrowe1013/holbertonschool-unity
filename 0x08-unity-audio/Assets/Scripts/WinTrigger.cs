@@ -7,6 +7,8 @@ public class WinTrigger : MonoBehaviour
     public GameObject winCanvas;
     public GameObject timerCanvas;
     public Timer timer;
+    public GameObject levelMusic;
+    public GameObject winMusic;
 
     void OnTriggerEnter()
     {
@@ -17,5 +19,7 @@ public class WinTrigger : MonoBehaviour
         timer.Win();
         timerCanvas.SetActive(false);
         winCanvas.SetActive(true);
+        levelMusic.SetActive(false);
+        winMusic.SetActive(true);
     }
 }

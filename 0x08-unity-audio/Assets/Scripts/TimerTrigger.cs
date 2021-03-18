@@ -8,6 +8,7 @@ public class TimerTrigger : MonoBehaviour
     public GameObject timerCanvas;
     GameObject[] coins;
     public Animator anim;
+    bool splat = true;
 
     void Start()
     {
@@ -26,6 +27,13 @@ public class TimerTrigger : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Happy Idle"))
         {
             pl.lockmove = false;
+            splat = true;
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Falling Flat Impact") && splat && pl.splat.isPlaying == false)
+        {
+            splat = false;
+            anim.SetBool("isFalling", false);
+            pl.splat.Play();
         }
     }
 

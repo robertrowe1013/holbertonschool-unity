@@ -30,14 +30,11 @@ public class PlayerController : MonoBehaviour
     public GameObject pauseCanvas;
     // animation
     public Animator anim;
+    // audio
+    public AudioSource runningGrass;
+    public AudioSource runningRock;
+    public AudioSource splat;
 
-    void Start ()
-    {
-        foreach (Animator ani in GetComponentsInChildren<Animator>())
-        {
-            anim = ani;
-        }
-    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && winCanvas.activeSelf == false)
@@ -95,11 +92,14 @@ public class PlayerController : MonoBehaviour
 
         if (thePlayer.transform.position.y < -20)
         {
-            anim.SetTrigger("isFalling");
+            anim.SetBool("isFalling", true);
             thePlayer.transform.position = spawnPoint.transform.position;
             lockmove = true;
         }
-
+        if (direction.magnitude >= 0.1f && lockmove == false && isGrounded && runningGrass.isPlaying == false)
+        {
+            runningGrass.Play();
+        }
     }
 
     void OnTriggerEnter(Collider item)
