@@ -30,14 +30,11 @@ public class PlayerController : MonoBehaviour
     public Animator anim;
     // Sounds
     public AudioSource runningGrass;
-    public AudioSource runningStone;
-    void Start ()
-    {
-        foreach (Animator ani in GetComponentsInChildren<Animator>())
-        {
-            anim = ani;
-        }
-    }
+    public AudioSource runningRock;
+    public AudioSource landingGrass;
+    public AudioSource landingRock;
+    public bool landingPlayed = false;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && winCanvas.activeSelf == false)
@@ -100,11 +97,15 @@ public class PlayerController : MonoBehaviour
             thePlayer.transform.position = spawnPoint.transform.position;
             lockmove = true;
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Running") && (runningGrass.isPlaying == false))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Running") && (runningGrass.isPlaying == false) && isGrounded)
         {
             runningGrass.Play();
         }
-
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Falling Flat Impact") && landingPlayed == false)
+        {
+            landingGrass.Play();
+            landingPlayed = true;
+        }
     }
 
     void OnTriggerEnter(Collider item)

@@ -11,10 +11,6 @@ public class TimerTrigger : MonoBehaviour
 
     void Start()
     {
-        foreach (Animator ani in player.GetComponentsInChildren<Animator>())
-        {
-            anim = ani;
-        }
         coins = GameObject.FindGameObjectsWithTag("Coin");
     }
 
@@ -26,6 +22,7 @@ public class TimerTrigger : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Happy Idle"))
         {
             pl.lockmove = false;
+            pl.landingPlayed = false;
         }
     }
 
