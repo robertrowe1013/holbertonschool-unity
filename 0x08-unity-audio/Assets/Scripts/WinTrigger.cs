@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WinTrigger : MonoBehaviour
 {
     public GameObject winCanvas;
     public GameObject timerCanvas;
     public Timer timer;
-
+    public AudioSource bgm;
+    public AudioSource winSting;
     void OnTriggerEnter()
     {
         Cursor.visible = true;
@@ -17,5 +16,7 @@ public class WinTrigger : MonoBehaviour
         timer.Win();
         timerCanvas.SetActive(false);
         winCanvas.SetActive(true);
+        bgm.Stop();
+        winSting.Play();
     }
 }
