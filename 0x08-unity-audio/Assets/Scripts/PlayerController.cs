@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -30,7 +28,9 @@ public class PlayerController : MonoBehaviour
     public GameObject pauseCanvas;
     // animation
     public Animator anim;
-
+    // Sounds
+    public AudioSource runningGrass;
+    public AudioSource runningStone;
     void Start ()
     {
         foreach (Animator ani in GetComponentsInChildren<Animator>())
@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
             anim.SetBool("isMoving", true);
+            
         }
         else
         {
@@ -98,6 +99,10 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("isFalling");
             thePlayer.transform.position = spawnPoint.transform.position;
             lockmove = true;
+        }
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Running") && (runningGrass.isPlaying == false))
+        {
+            runningGrass.Play();
         }
 
     }
