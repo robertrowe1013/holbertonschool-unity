@@ -6,14 +6,13 @@ public class AmmoManager : MonoBehaviour
 {
     public UIManager ammoButton;
     public float ammoTimer = 0f;
-    public Vector3 reloadPos;
+    public Vector3 reloadPos = new Vector3(0, -0.1f, 0.5f);
     public Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
-        reloadPos = gameObject.transform.position;
     }
 
     // Update is called once per frame
