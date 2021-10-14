@@ -16,6 +16,8 @@ public class MainGameManager : MonoBehaviour
     public GameObject TestTarget;
     public GameObject TestBall;
     public GameObject RedTestBall;
+    public List<GameObject> targets = new List<GameObject>();
+
 
     void Awake()
     {
@@ -44,20 +46,20 @@ public class MainGameManager : MonoBehaviour
                 }
             }
             pMan.enabled = false;
-            // deactivate plane visualization
-            // plane.ARPlaneMeshVisualizer.enabled = false;
-
 
             StartCanvas.SetActive(true);
 
             // create 5 target objects
             GameObject centerTarget = Instantiate(Target, plane.center + new Vector3(0, .03f, 0), Quaternion.identity);
             centerTarget.transform.SetParent(plane.transform);
+            // centerTarget.transform.rotation = Quaternion.LookRotation(this.transform.forward);
+            targets.Add(centerTarget);
 
             for (int i = 1; i < plane.boundary.Length - 1; i += plane.boundary.Length/4)
             {
                 GameObject randomTarget = Instantiate(Target, plane.center + new Vector3(((plane.boundary[i].x) / 2), .03f, ((plane.boundary[i].y) / 2)), Quaternion.identity);
                 randomTarget.transform.SetParent(plane.transform);
+                targets.Add(randomTarget);
             }
 
             // mark boundary nodes for testing

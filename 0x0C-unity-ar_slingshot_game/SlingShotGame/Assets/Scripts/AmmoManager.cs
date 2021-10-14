@@ -4,34 +4,19 @@ using UnityEngine;
 
 public class AmmoManager : MonoBehaviour
 {
-    public UIManager ammoButton;
-    public float ammoTimer = 0f;
-    public Vector3 reloadPos = new Vector3(0, -0.1f, 0.5f);
-    public Rigidbody rb;
+    public GameObject ui;
 
-    // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        ui = GameObject.FindWithTag("InGameUI");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnTriggerEnter(Collider item)
     {
-        if (ammoTimer > 300f)
+        if (item.tag == "Target")
         {
-            ammoButton.isShot = false;
-            ammoTimer = 0f;
-            rb.useGravity = false;
-            rb.velocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            gameObject.transform.position = reloadPos;
-
-        }
-
-        if (ammoButton.isShot)
-        {
-            ammoTimer += 1f;
+            ui.GetComponent<UIManager>().score += 10;
+            ui.GetComponent<UIManager>().Reload();
         }
     }
 }

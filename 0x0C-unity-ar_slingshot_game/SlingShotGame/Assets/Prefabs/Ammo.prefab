@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7105884476763469122}
   - component: {fileID: 7105884476763469123}
   - component: {fileID: 417877830}
-  - component: {fileID: 417877834}
+  - component: {fileID: 7711358626320614051}
+  - component: {fileID: 835204380499889516}
   m_Layer: 0
   m_Name: Ammo
   m_TagString: Untagged
@@ -113,7 +114,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &417877834
+--- !u!135 &7711358626320614051
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105884476763469121}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &835204380499889516
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +139,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f718c8961bff974f9cd1df1a82786ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoButton: {fileID: 0}
-  ammoTimer: 0
-  reloadPos: {x: 0, y: 0, z: 0}
-  rb: {fileID: 0}
