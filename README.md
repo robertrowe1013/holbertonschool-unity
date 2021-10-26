@@ -91,3 +91,10 @@ An AR game using AR Foundation and plane detection.
   >
 </p>
 
+### Author
+
+Robert Rowe, software engineering student at Holberton, specializing in AR/VR.
+
+* [LinkedIn](https://www.linkedin.com/in/robertrowe1013/)
+
+* [Twitter](https://twitter.com/RobertRowe1013)
