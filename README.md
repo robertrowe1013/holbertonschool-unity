@@ -33,13 +33,13 @@ These projects were implemented using a Maze game.
 
 These Projects were implemented using a 3d Platformer game.
 
-0x05. Assets: Models, Textures
+* 0x05. Assets: Models, Textures
 
-0x06. Assets: UI
+* 0x06. Assets: UI
 
-0x07. Animation
+* 0x07. Animation
 
-0x08. Audio
+* 0x08. Audio
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/PlatformerScreenshot.JPG"
@@ -50,7 +50,7 @@ These Projects were implemented using a 3d Platformer game.
 
 Project using AR to create an animated and interactive business card.
 
-0x09. AR Business Card
+* 0x09. AR Business Card
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/ARBusinessCardScreenShot.jpg"
@@ -61,7 +61,7 @@ Project using AR to create an animated and interactive business card.
 
 A VR Tour of the San Fransisco campus with interactive info tags.
 
-0x0A. 360 Video
+* 0x0A. 360 Video
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRRoomScreenshot.JPG"
@@ -72,7 +72,7 @@ A VR Tour of the San Fransisco campus with interactive info tags.
 
 A VR Escape Room game.
 
-0x0B. VR Room
+* 0x0B. VR Room
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRTourScreenshot.JPG"
@@ -83,7 +83,7 @@ A VR Escape Room game.
 
 An AR game using AR Foundation and plane detection.
 
-0x0C. AR Slingshot Game
+* 0x0C. AR Slingshot Game
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/SlingShotGameScreenShot.jpg"
