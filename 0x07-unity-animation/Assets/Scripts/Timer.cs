@@ -10,7 +10,6 @@ public class Timer : MonoBehaviour
     public float timerValue = 0f;
     public bool timerValueTrigger = false;
 
-    // Update is called once per frame
     void Update()
     {
         if (timerValueTrigger)

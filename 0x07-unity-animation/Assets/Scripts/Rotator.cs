@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// For spinning coins
 public class Rotator : MonoBehaviour
 {
     void Update()

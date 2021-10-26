@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
+    // Not yet implemented
     bool isFalling = false;
 
     void OnTriggerEnter(Collider item)
