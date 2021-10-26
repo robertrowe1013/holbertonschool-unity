@@ -64,8 +64,8 @@ A VR Tour of the San Fransisco campus with interactive info tags.
 0x0A. 360 Video
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/PlatformerScreenshot.JPG"
-       alt="3D Platformer"
+  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRRoomScreenshot.JPG"
+       alt="Escape Room"
   >
 </p>
 
