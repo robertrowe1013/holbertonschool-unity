@@ -9,14 +9,25 @@ Assignments for the AR/VR Specialization track at Holberton.
 
 ### Assignments
 
-0x00. User Interface
-0x01. Unity Concepts
 These projects covered Unity basics
 
-0x02. Scripting
-0x03. UI
-0x04. Publishing
+0x00. User Interface
+
+0x01. Unity Concepts
+
 These projects were implemented using a Maze game.
+
+0x02. Scripting
+
+0x03. UI
+
+0x04. Publishing
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/MazeScreenshot.JPG"
+       alt="Maze Game"
+  >
+</p>
 
 0x05. Assets: Models, Textures
 0x06. Assets: UI
