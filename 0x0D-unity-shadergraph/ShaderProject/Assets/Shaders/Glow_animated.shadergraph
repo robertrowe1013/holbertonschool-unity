@@ -10,9 +10,6 @@
             "m_Id": "932f0bd0a03841fb8d5e52525ca2ad6e"
         },
         {
-            "m_Id": "c86256a03a104ffcb70857774b4fc022"
-        },
-        {
             "m_Id": "99cd203980444e83878fe03a30d2ccb2"
         },
         {
@@ -1806,29 +1803,6 @@
         "g": 0.0,
         "b": 0.0,
         "a": 1.0
-    }
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "c86256a03a104ffcb70857774b4fc022",
-    "m_Guid": {
-        "m_GuidSerialized": "2a98b10b-fcf9-4f5e-b057-aea03bb2e9cc"
-    },
-    "m_Name": "GlowStrength",
-    "m_DefaultReferenceName": "Vector1_c86256a03a104ffcb70857774b4fc022",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 3.0,
-    "m_FloatType": 0,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
     }
 }
 
