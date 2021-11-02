@@ -3,20 +3,20 @@
 
 ## Description
 
-Assignments for the AR/VR Specialization track at Holberton.
+Assignments for the AR/VR Specialization track at Holberton to learn using Unity, Vuforia, AR Foundation, and other tools used in XR developement.
 
 
 
 ### Assignments
 
-These projects covered Unity basics
+These projects covered Unity basics.
 
 * 0x00. User Interface
 
 * 0x01. Unity Concepts
 
-These projects were implemented using a Maze game.
 
+These projects were implemented using a Maze game. We learned scripting, UI, and publishing for mutliple platforms. 
 
 * 0x02. Scripting
 
@@ -31,7 +31,7 @@ These projects were implemented using a Maze game.
 </p>
 
 
-These Projects were implemented using a 3d Platformer game.
+These Projects were implemented using a 3d Platformer game. We learned how to use models, textures, animation, and audio assets. 
 
 * 0x05. Assets: Models, Textures
 
@@ -48,7 +48,7 @@ These Projects were implemented using a 3d Platformer game.
 </p>
 
 
-Project using AR to create an animated and interactive business card.
+Project using AR to create an animated and interactive business card. Learned to use Vuforia for image tracking.
 
 * 0x09. AR Business Card
 
@@ -59,29 +59,29 @@ Project using AR to create an animated and interactive business card.
 </p>
 
 
-A VR Tour of the San Fransisco campus with interactive info tags.
+A VR Tour of the San Fransisco campus with interactive info tags. Learned to use 360 Video assests and publish to multiple VR headsets
 
 * 0x0A. 360 Video
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRRoomScreenshot.JPG"
+  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRTourScreenshot.JPG"
        alt="Escape Room"
   >
 </p>
 
 
-A VR Escape Room game.
+A VR Escape Room game. We were given a basic level build, learned to implement movement and controller tracking in VR, and designed our own puzzles to "escape" the rooms.
 
 * 0x0B. VR Room
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRTourScreenshot.JPG"
+  <img src="https://raw.githubusercontent.com/robertrowe1013/holbertonschool-unity/main/Screenshots/VRRoomScreenshot.JPG"
        alt="VR Tour"
   >
 </p>
 
 
-An AR game using AR Foundation and plane detection.
+An AR slingshot game. Learned to use AR Foundation for plane detection and how to build AR apps in Unity that require instantiation of objects via coding without the help of building the scenes in Unity.
 
 * 0x0C. AR Slingshot Game
 
